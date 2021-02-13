@@ -12,8 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       Dish.belongsTo(models.Category, {
         foreignKey: "categoryid",
         as: "category_name",
-        // foreignKeyConstraint: true,
-        // onDelete: "cascade",
+        onDelete: "CASCADE",
       });
     }
   }

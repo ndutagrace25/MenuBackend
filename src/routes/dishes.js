@@ -17,4 +17,15 @@ router.get("/", (req, res) => {
   });
 });
 
+// post dish
+router.post("/", (req, res) => {
+  dishController.saveDish(req.body, (err, dish) => {
+    if (err) {
+      res.status(400).json(err);
+    } else {
+      res.status(200).json(dish);
+    }
+  });
+});
+
 module.exports = router;
