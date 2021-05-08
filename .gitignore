@@ -2,5 +2,5 @@ node_modules/
 /package-lock.json
 /config
 .env
-menu-key.ppk
-menu-key.pem
+/menu-key.ppk
+/menu-key.pem
