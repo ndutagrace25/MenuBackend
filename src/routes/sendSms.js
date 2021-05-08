@@ -6,7 +6,7 @@ const router = express.Router();
 // import controllers
 const { sendSmsController } = require("../controllers");
 
-// post category
+// post sms
 router.post("/", (req, res) => {
   sendSmsController.sendMessage(req.body, (err, sms) => {
     if (err) {
