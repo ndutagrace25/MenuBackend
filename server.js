@@ -1,6 +1,5 @@
 // import packages
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
 
 // Enabling CORS
@@ -19,14 +18,14 @@ app.use((req, res, next) => {
 
 // Linking body parser for url reading
 app.use(
-  bodyParser.urlencoded({
+  express.urlencoded({
     extended: false,
     limit: "10gb",
   })
 );
 
 app.use(
-  bodyParser.json({
+  express.json({
     limit: "10gb",
   })
 );
@@ -37,7 +36,7 @@ const { categories, dishes, sms } = require("./src/routes");
 // initialize routes
 app.use("/categories", categories);
 app.use("/dishes", dishes);
-app.use("/sms", sms);
+app.use('/sms', sms);
 app.use("/", (req, res) => {
   res.send("Hello World");
 });
