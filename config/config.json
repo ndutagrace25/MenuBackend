@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": "kanana20",
-    "database": "hotelmenu",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "admin",
+    "password": "r6r5bb!!",
+    "database": "test",
+    "host": "test.ceahpyjf3peg.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port": "3306"
   },
   "test": {
     "username": "root",
@@ -21,4 +22,3 @@
     "dialect": "mysql"
   }
 }
-
