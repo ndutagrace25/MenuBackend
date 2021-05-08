@@ -2,3 +2,5 @@
 /package-lock.json
 /config
 .env
+menu-key.ppk
+menu-key.pem
