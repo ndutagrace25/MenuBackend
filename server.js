@@ -32,11 +32,12 @@ app.use(
 );
 
 // import routes
-const { categories, dishes } = require("./src/routes");
+const { categories, dishes, sms } = require("./src/routes");
 
 // initialize routes
 app.use("/categories", categories);
 app.use("/dishes", dishes);
+app.use("/sms", sms);
 app.use("/", (req, res) => {
   res.send("Hello World");
 });
