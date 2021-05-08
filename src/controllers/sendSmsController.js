@@ -19,7 +19,7 @@ module.exports = {
       // Set your message
       message: text.message,
       // Set your shortCode or senderId
-      //from: "XXYYZZ",
+      //from: "XXYYZZd",
     };
 
     // That’s it, hit send and we’ll take care of the rest
