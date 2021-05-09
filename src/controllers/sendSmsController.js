@@ -1,6 +1,8 @@
+require("dotenv").config();
+
 const credentials = {
-  apiKey: "c22b3842b972ff5b24f6e486fdf7c2a9b734ba1e8faae6526bc7cd7f99025392", // use your sandbox app API key for development in the test environment
-  username: "kibe-junior", // use 'sandbox' for development in the test environment
+  apiKey: process.env.API_KEY, // use your sandbox app API key for development in the test environment
+  username: process.env.SMS_USERNAME, // use 'sandbox' for development in the test environment
 };
 
 // Initialize the SDK
@@ -29,7 +31,7 @@ module.exports = {
         result(null, { message: "Success" });
       })
       .catch((error) => {
-        result(error, null)
+        result(error, null);
       });
   },
 };
