@@ -19,7 +19,7 @@ module.exports = {
 
     const options = {
       // Set the numbers you want to send to in international format
-      to: "+254748371567",
+      to: "+254708807403",
       // Set your message
       message: text.message,
       // Set your shortCode or senderId
