@@ -1,6 +1,7 @@
 // import packages
 const express = require("express");
 const app = express();
+const upload = require("express-fileupload");
 
 // Enabling CORS
 app.use((req, res, next) => {
@@ -30,13 +31,17 @@ app.use(
   })
 );
 
+app.use(upload());
+app.use("/uploads", express.static("uploads"));
+
 // import routes
-const { categories, dishes, sms } = require("./src/routes");
+const { categories, dishes, sms, uploads } = require("./src/routes");
 
 // initialize routes
 app.use("/categories", categories);
 app.use("/dishes", dishes);
 app.use('/sms', sms);
+app.use('/upload', uploads);
 app.use("/", (req, res) => {
   res.send("Hello World");
 });
